@@ -1,138 +1,108 @@
 
-var tl = gsap.timeline()
-function locomotiveAnimation() {
-    gsap.registerPlugin(ScrollTrigger);
+var tl = gsap.timeline();
 
-// Using Locomotive Scroll from Locomotive https://github.com/locomotivemtl/locomotive-scroll
-
-const locoScroll = new LocomotiveScroll({
-  el: document.querySelector("#main"),
-  smooth: true
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
 });
-// each time Locomotive Scroll updates, tell ScrollTrigger to update too (sync positioning)
-locoScroll.on("scroll", ScrollTrigger.update);
 
-// tell ScrollTrigger to use these proxy methods for the "#main" element since Locomotive Scroll is hijacking things
-ScrollTrigger.scrollerProxy("#main", {
-  scrollTop(value) {
-    return arguments.length ? locoScroll.scrollTo(value, 0, 0) : locoScroll.scroll.instance.scroll.y;
-  }, // we don't have to define a scrollLeft because we're only scrolling vertically.
-  getBoundingClientRect() {
-    return {top: 0, left: 0, width: window.innerWidth, height: window.innerHeight};
-  },
-  // LocomotiveScroll handles things completely differently on mobile devices - it doesn't even transform the container at all! So to get the correct behavior and avoid jitters, we should pin things with position: fixed on mobile. We sense it by checking to see if there's a transform applied to the container (the LocomotiveScroll-controlled element).
-  pinType: document.querySelector("#main").style.transform ? "transform" : "fixed"
-});
-// each time the window updates, we should refresh ScrollTrigger and then update LocomotiveScroll. 
-ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
-
-// after everything is set up, refresh() ScrollTrigger and update LocomotiveScroll because padding may have been added for pinning, etc.
-ScrollTrigger.refresh();
-
-}
 function loadingAnimation() {
-    
+    tl.from(".line h1", {
+        y: 200,
+        opacity: 0,
+        stagger: 0.2,
+        duration: 0.6
+    });
 
+    tl.from("#line1-part1, .line h2", {
+        opacity: 0,
+        onStart: function () {
+            var h5 = document.querySelector("#line1-part1 h5");
+            var grow = 0;
 
-tl.from(".line h1", {
-    y: 200,
-    opacity: 0,
-    stagger: 0.2,
-    duration: 0.6
-})
+            setInterval(function () {
+                if (grow < 100) {
+                    h5.innerHTML = grow++;
+                } else {
+                    h5.innerHTML = 100;
+                }
+            }, 10);
+        },
+    });
 
+    tl.to("#loader", {
+        opacity: 0,
+        duration: 1.5,
+        delay: 0
+    });
 
+    tl.from("#nav", {
+        opacity: 0
+    });
 
-tl.from("#line1-part1, .line h2", {
-    opacity: 0,
-    onStart: function () {
-        var h5 = document.querySelector("#line1-part1 h5");
-        var grow = 0;
+    tl.from("#page1", {
+        y: 1200,
+        opacity: 0,
+        ease: Power4,
+        duration: 0.5
+    });
 
-        setInterval(function () {
+    tl.to("#loader", {
+        display: "none"
+    });
 
-            if (grow < 100) {
-                h5.innerHTML = grow++;
-            }
-            else {
-                h5.innerHTML = 100
-            }
-           
-        },10)
-    },
-})
-tl.to("#loader", {
-    opacity: 0,
-    duration: 1.5,
-    delay: 0
-})
-tl.from("#nav",{
-    opacity:0
-})
-tl.from("#page1", {
-    y:1200,
-    opacity:0,
-    ease:Power4,
-    duration: 0.5
-})
-tl.to("#loader",{
-    display: "none"
-})
-tl.from(".nav-line", {
-    y: 200,
-    opacity: 0,
-    stagger: 0.2,
-    duration: 0.6
-})
-tl.from(".hero h1,.hero h2,.hero h3",{
-    y: 100,
-    stagger:0.2,
-    duration: 0.
-})
+    tl.from(".nav-line", {
+        y: 200,
+        opacity: 0,
+        stagger: 0.2,
+        duration: 0.6
+    });
+
+    tl.from(".hero h1,.hero h2,.hero h3", {
+        y: 100,
+        stagger: 0.2,
+        duration: 0.
+    });
 }
-
-
-
 
 loadingAnimation();
 
-
 function cursorAnimation() {
-   
-    document.addEventListener('mousemove',function(dets){
-        console.log(dets.x);
-        gsap.to("#crsr",{
-            left:dets.x,
-            top:dets.y,
+    document.addEventListener('mousemove', function (dets) {
+        gsap.to("#crsr", {
+            left: dets.x,
+            top: dets.y,
             ease: Power4
-        })
-    })
-    
-    
-    Shery.makeMagnet("#nav-part2 h1" /* Element to target.*/, {
-    
+        });
+    });
+
+    Shery.makeMagnet("#nav-part2 h1", {
         ease: "cubic-bezier(0.23, 1, 0.320, 1)",
         duration: 1,
-      });
-    
+    });
 }
 
 
-locomotiveAnimation();
 
-function sheryAnimation() {
-        Shery.imageEffect(".image-div",{
-            style:5,
-            gooey:true 
-        })
-}
 
-sheryAnimation();
-document.querySelectorAll("#skills h4").forEach(function(element) {
-    element.addEventListener("click", function() {
+// Event listeners for skills and projects
+document.getElementById("download-resume").addEventListener("click", function() {
+    const link = document.createElement("a");
+    link.href = "https://drive.google.com/uc?export=download&id=1h9-PZTikEliDn0-eH4ykxWaADJetkirx";
+    link.download = "Herin_Soni_Resume.pdf"; // You can specify the name of the downloaded file
+    link.click();
+});
+
+document.querySelectorAll("#skills h4").forEach(function (element) {
+    element.addEventListener("click", function () {
         let skill = element.innerText;
 
-        switch(skill) {
+        switch (skill) {
             case "Django":
                 window.location.href = "https://www.djangoproject.com/";
                 break;
@@ -143,10 +113,7 @@ document.querySelectorAll("#skills h4").forEach(function(element) {
                 window.location.href = "https://cloud.google.com/";
                 break;
             case "Projects":
-                window.location.href = "https://github.com/herinsoni"; // Example URL for projects
-                break;
-            case "GIT/Github":
-                window.location.href = "https://github.com/";
+                window.location.href = "https://github.com/herin7"; // Example URL for projects
                 break;
             case "SQL":
                 window.location.href = "https://www.w3schools.com/sql/";
@@ -155,7 +122,7 @@ document.querySelectorAll("#skills h4").forEach(function(element) {
                 window.location.href = "https://github.com/";
                 break;
             case "CS50":
-                window.location.href = "https://cs50.harvard.edu/";
+                window.location.href = "https://certificates.cs50.io/03881be8-7df2-4bc5-9548-7d7cb4a61699.pdf?size=letter";
                 break;
             default:
                 console.log("No URL defined for " + skill);
@@ -163,25 +130,23 @@ document.querySelectorAll("#skills h4").forEach(function(element) {
     });
 });
 
-
-document.querySelectorAll("#page4-blue .blue-div-elem h4").forEach(function(element) {
-    element.addEventListener("click", function() {
+document.querySelectorAll("#page4-blue .blue-div-elem h4").forEach(function (element) {
+    element.addEventListener("click", function () {
         let projectName = element.innerText;
 
-        switch(projectName) {
+        switch (projectName) {
             case "Crypto Platform":
-                
                 window.location.href = "https://example.com/crypto-platform";
                 break;
             case "ChecEat-Food campanion":
                 if (element.nextElementSibling.innerText.includes("Perishable Items")) {
-                    window.location.href = "https://example.com/checeat-food-companion";
+                    window.location.href = "https://github.com/herin7/bb4_django";
                 } else if (element.nextElementSibling.innerText.includes("Job Recommendations")) {
-                    window.location.href = "https://example.com/checeat-job-recommendations";
+                    window.location.href = "https://github.com/herin7/bb4_django";
                 }
                 break;
             case "CareerSetGo":
-                window.location.href = "https://example.com/careersetgo";
+                window.location.href = "https://github.com/shalvirajpura2/CareerSetGo";
                 break;
             default:
                 console.log("No URL defined for " + projectName);
@@ -189,12 +154,11 @@ document.querySelectorAll("#page4-blue .blue-div-elem h4").forEach(function(elem
     });
 });
 
-
-document.querySelectorAll("#footer .box h5").forEach(function(element) {
-    element.addEventListener("click", function() {
+document.querySelectorAll("#footer .box h5").forEach(function (element) {
+    element.addEventListener("click", function () {
         let text = element.innerText;
 
-        switch(text) {
+        switch (text) {
             case "LinkedIn":
                 window.open("https://www.linkedin.com/in/herinsoni", "_blank");
                 break;
@@ -213,8 +177,7 @@ document.querySelectorAll("#footer .box h5").forEach(function(element) {
     });
 });
 
-
-document.getElementById("video-cursor").addEventListener("click", function() {
+document.getElementById("video-cursor").addEventListener("click", function () {
     var video = document.getElementById("video-player");
 
     if (video.paused) {
@@ -225,3 +188,4 @@ document.getElementById("video-cursor").addEventListener("click", function() {
         this.style.display = "block"; // Show the play icon if the video is paused again
     }
 });
+
