@@ -961,3 +961,26 @@ body {
     justify-content: space-between;
 }
 
+@media only screen and (max-width: 768px) {
+    body {
+        display: none;
+        content: "Only for Desktop";
+        color: #fff;
+
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    body {
+        display: none;
+    }
+    
+    #mobile-message {
+        display: block;
+        color: #fff;
+        background-color: #000;
+        text-align: center;
+        padding: 20px;
+        font-size: 1.5rem;
+    }
+}
