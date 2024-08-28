@@ -334,8 +334,8 @@ body {
 }
 #page4-content>p{
     color: #fff;
-    font-size: 2.1vw;
-    width: 68%;
+    font-size: 1.5vw;
+    width: 80%;
     margin-top: 5vw;
     text-transform: uppercase;
 }
@@ -371,6 +371,7 @@ body {
 
 
 #page4-flex p{
+    margin-top: 10vh;
     font-size: 0.9vw;
     width: 20%;
     color: #fff;
