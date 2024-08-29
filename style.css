@@ -1,42 +1,13 @@
-
 @font-face {
-    font-family: 'Playwrite CU';
-    src: url('./fonts/PlaywriteCU-VariableFont_wght.ttf') format('truetype');
-    font-weight: 100 900;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'MonumentExtended';
-    src: url('./fonts/MonumentExtended-Ultrabold.otf') format('opentype');
+    font-family: 'MonumentExtended Ultrabold';
+    src: url('./fonts/MonumentExtended-Ultrabold - Copy.otf') format('opentype');
     font-weight: 800;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'MonumentExtended';
-    src: url('./fonts/MonumentExtended-Regular.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Montserrat';
-    src: url('./fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
-    font-weight: 100 900;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Montserrat';
-    src: url('./fonts/Montserrat-Italic-VariableFont_wght.ttf') format('truetype');
-    font-weight: 100 900;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'Courgette';
-    src: url('./fonts/Courgette-Regular.ttf') format('truetype');
+    font-family: 'MonumentExtended Regular';
+    src: url('./fonts/MonumentExtended-Regular - Copy.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
@@ -131,7 +102,7 @@ html, body {
     animation-name: anime3;
     animation-duration: 2s;
     animation-iteration-count: infinite;
-    font-family: "Courgette";
+    font-family: "Courgette", cursive;
 
 }
 .line h1 span{
@@ -219,14 +190,14 @@ html, body {
     align-items: center;
     gap: 2.5vw;
     font-size: 0.5vw;
-    font-family: Montserrat;
+    font-family: "Montserrat", sans-serif;
     font-weight: 300;
      text-transform: uppercase;
     overflow: hidden;
 }
 #nav #nav-part2 .nav-line{
     font-size: 0.5vw;
-    font-family: Montserrat;
+    font-family: "Montserrat", sans-serif;
     font-weight: 300;
     text-transform: uppercase;
     color: white;
@@ -239,7 +210,7 @@ html, body {
 }
 
 #hero4 h2{
-    font-family: Montserrat;
+    font-family: "Montserrat", sans-serif;
     line-height: 6vw;
     font-size: 6.5vw; 
     color: white;
@@ -262,7 +233,7 @@ html, body {
 
 
 #page1 .hero h1 {
-    font-family: Montserrat;
+    font-family: "Montserrat", sans-serif;
     line-height: 6.5vw; 
     font-size: 6.5vw; 
     color: white;
@@ -417,7 +388,7 @@ html, body {
     position: absolute;
     color: #fec100;
     font-size: 5vw;
-    font-family: 'Playwrite CU';
+    font-family: "Playwrite CU", cursive;
     left: -40%;
     top: -10%;
 }
@@ -425,7 +396,7 @@ html, body {
     color: #e9e9e9;
     font-size: 1.5vw;
     width: 80%;
-    font-family: Montserrat;
+    font-family: "Montserrat", sans-serif;
     margin-top: 5vw;
     font-weight: 100;
     line-height: 2vw;
@@ -467,7 +438,7 @@ html, body {
     width: 20%;
     color: #ffffff;
     margin-left: 1vw;
-    font-family: Montserrat;
+    font-family: "Montserrat", sans-serif;
     font-style: italic;
 
     opacity: 0.7;
@@ -658,7 +629,7 @@ html, body {
     position: absolute;
     color: #fec100;
     font-size: 5vw;
-    font-family:  Playwrite CU;
+    font-family: "Playwrite CU", cursive;
     bottom: -20%;
     right: 110%;
 }
@@ -669,7 +640,7 @@ html, body {
     color: #fec100;
     font-weight: 900;
     font-size: 5vw;
-    font-family: Playwrite CU;
+    font-family: "Playwrite CU", cursive;
     left: -20%;
     top: 10%;
 }
@@ -836,7 +807,7 @@ html, body {
 
 #skillset h3{
     font-weight: 650;
-    font-family: Montserrat;
+    font-family: "Montserrat", sans-serif;
     font-size: 2vw;
     margin-top: 2vw;
     color: rgb(255, 255, 255);
@@ -846,7 +817,7 @@ html, body {
 
 #skillset h4{
     font-weight: 650;
-    font-family: Montserrat;
+    font-family: "Montserrat", sans-serif;
     font-size: 1rem;
     margin-top: 2vw;
     color: rgb(255, 255, 255);
@@ -933,7 +904,7 @@ html, body {
 
 #portfolio-section #skills h4 {
     
-    font-family:  Playwrite CU;
+    font-family: "Playwrite CU", cursive;
     color: #fff;
     font-size: 1.5vw;
     left: -40%;
