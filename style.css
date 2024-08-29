@@ -61,13 +61,15 @@ body {
 #loader {
     height: 100%;
     width: 100%;
-    background-color: transparent;
+    background-color: #000;
     z-index: 999;
     position: fixed;
     padding: 25vh 20vw;
-
+    z-index: 9999; /* Ensure loader is on top */
 
 }
+
+
 
 .line {
     height: -webkit-fit-content;
