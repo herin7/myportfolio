@@ -1,42 +1,42 @@
 
 @font-face {
     font-family: 'Playwrite CU';
-    src: url('myportfolio/fonts/PlaywriteCU-VariableFont_wght.ttf') format('truetype');
+    src: url('./fonts/PlaywriteCU-VariableFont_wght.ttf') format('truetype');
     font-weight: 100 900;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'MonumentExtended';
-    src: url('myportfolio/fonts/MonumentExtended-Ultrabold.otf') format('opentype');
+    src: url('./fonts/MonumentExtended-Ultrabold.otf') format('opentype');
     font-weight: 800;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'MonumentExtended';
-    src: url('myportfolio/fonts/MonumentExtended-Regular.otf') format('opentype');
+    src: url('./fonts/MonumentExtended-Regular.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Montserrat';
-    src: url('myportfolio/fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
+    src: url('./fonts/Montserrat-VariableFont_wght.ttf') format('truetype');
     font-weight: 100 900;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Montserrat';
-    src: url('myportfolio/fonts/Montserrat-Italic-VariableFont_wght.ttf') format('truetype');
+    src: url('./fonts/Montserrat-Italic-VariableFont_wght.ttf') format('truetype');
     font-weight: 100 900;
     font-style: italic;
 }
 
 @font-face {
     font-family: 'Courgette';
-    src: url('myportfolio/fonts/Courgette-Regular.ttf') format('truetype');
+    src: url('./fonts/Courgette-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
