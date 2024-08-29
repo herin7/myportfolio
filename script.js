@@ -50,7 +50,7 @@ function loadingAnimation() {
         ease: Power4,
         duration: 0.5
     });
-
+  
     tl.to("#loader", {
         display: "none"
     });
@@ -59,7 +59,7 @@ function loadingAnimation() {
         y: 200,
         opacity: 0,
         stagger: 0.2,
-        duration: 0.4
+        duration: 0.5
     });
 
     tl.from(".hero h1,.hero h2,.hero h3", {
