@@ -1,4 +1,3 @@
-
 var tl = gsap.timeline();
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -90,11 +89,11 @@ Shery.makeMagnet("#nav-part2 h1", {
     duration: 1,
 });
 
-// Event listeners for skills and projects
+
 document.getElementById("download-resume").addEventListener("click", function () {
     const link = document.createElement("a");
     link.href = "https://drive.google.com/uc?export=download&id=1h9-PZTikEliDn0-eH4ykxWaADJetkirx";
-    link.download = "Herin_Soni_Resume.pdf"; // You can specify the name of the downloaded file
+    link.download = "Herin_Soni_Resume.pdf";
     link.click();
 });
 
@@ -113,7 +112,7 @@ document.querySelectorAll("#skills h4").forEach(function (element) {
                 window.location.href = "https://cloud.google.com/";
                 break;
             case "Projects":
-                window.location.href = "https://github.com/herin7"; // Example URL for projects
+                window.location.href = "https://github.com/herin7";
                 break;
             case "SQL":
                 window.location.href = "https://www.w3schools.com/sql/";
@@ -176,18 +175,4 @@ document.querySelectorAll("#footer .box h5").forEach(function (element) {
         }
     });
 });
-
-document.getElementById("video-cursor").addEventListener("click", function () {
-    var video = document.getElementById("video-player");
-
-    if (video.paused) {
-        video.play();
-        this.style.display = "none"; // Hide the play icon after the video starts
-    } else {
-        video.pause();
-        this.style.display = "block"; // Show the play icon if the video is paused again
-    }
-});
-
-
 

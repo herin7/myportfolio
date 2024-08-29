@@ -474,22 +474,22 @@
             </div>
         </div>
 
-     
+
         <script>
-          function isMobile() {
-    return window.innerWidth <= 768;
-}
+            function isMobile() {
+                return window.innerWidth <= 768;
+            }
 
-function showMobileAlert() {
-    if (isMobile()) {
-        alert("This site is not accessible from mobile devices. Please visit on a desktop.");
-    }
-}
+            function showMobileAlert() {
+                if (isMobile()) {
+                    alert("This site is not accessible from mobile devices. Please visit on a desktop.");
+                }
+            }
 
-// Execute the function when the DOM is fully loaded
-document.addEventListener('DOMContentLoaded', showMobileAlert);
-// Add an event listener for window resize
-window.addEventListener('resize', showMobileAlert);   </script>
+            // Execute the function when the DOM is fully loaded
+            document.addEventListener('DOMContentLoaded', showMobileAlert);
+            // Add an event listener for window resize
+            window.addEventListener('resize', showMobileAlert);   </script>
         <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
             integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="

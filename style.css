@@ -23,7 +23,7 @@
     margin: 0;
     padding: 0;
     -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 
@@ -32,7 +32,7 @@ body {
     height: 100%;
     font-family: 'Montserrat', 'Playwrite CU', 'MonumentExtended', 'Courgette', 'Helvetica Neue', Arial, sans-serif;
     scroll-behavior: smooth;
-    
+
 }
 
 #main {
@@ -52,8 +52,8 @@ body {
     position: fixed;
     z-index: 999;
     -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 
 }
 
@@ -65,7 +65,7 @@ body {
     z-index: 999;
     position: fixed;
     padding: 25vh 20vw;
-    
+
 
 }
 
@@ -77,11 +77,11 @@ body {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
     gap: 7vw;
 }
 
@@ -101,11 +101,11 @@ body {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
 
 }
 
@@ -127,11 +127,11 @@ body {
     color: rgb(255, 255, 255);
     text-transform: uppercase;
     -webkit-animation-name: anime3;
-            animation-name: anime3;
+    animation-name: anime3;
     -webkit-animation-duration: 2s;
-            animation-duration: 2s;
+    animation-duration: 2s;
     -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
     font-family: "Courgette", cursive;
 
 }
@@ -227,11 +227,11 @@ body {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
     padding: 1vw 4vw;
     color: #fff;
 
@@ -242,12 +242,12 @@ body {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
     gap: 2vw;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     padding: 1.5vw 3vw;
 }
 
@@ -260,7 +260,7 @@ body {
 
 #page1 #nav #nav-left h3:hover {
     -webkit-text-decoration: underline 2px solid #FFA63D;
-            text-decoration: underline 2px solid #FFA63D;
+    text-decoration: underline 2px solid #FFA63D;
     text-underline-offset: 2vh;
 }
 
@@ -271,11 +271,11 @@ body {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     gap: 2.5vw;
     font-size: 0.5vw;
     font-family: "Montserrat", sans-serif;
@@ -296,7 +296,7 @@ body {
 
 #nav #nav-part2 .nav-line h1:hover {
     -webkit-text-decoration: underline 1px dotted #FFA63D;
-            text-decoration: underline 1px dotted #FFA63D;
+    text-decoration: underline 1px dotted #FFA63D;
 
 }
 
@@ -356,7 +356,7 @@ body {
     height: 100%;
     width: 100%;
     -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
     top: 0;
 }
 
@@ -372,7 +372,7 @@ body {
     height: 100%;
     width: 100%;
     -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
 }
 
 #video-cursor {
@@ -386,11 +386,11 @@ body {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     z-index: 999;
     left: 75%;
 }
@@ -576,18 +576,18 @@ body {
     height: 10vh;
     border-bottom: 2px solid #fff;
     -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     margin-top: 2vw;
 }
 
 #page4-blue .blue-div-elem h4 {
     font-family: Plain, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
     padding: 3vw 3vw;
-    
+
     width: 70%;
     font-size: 1.5vw;
     color: #fff;
@@ -596,7 +596,7 @@ body {
 
 #page4-blue .blue-div-elem h4:hover {
     -webkit-text-decoration: underline 1px solid white;
-            text-decoration: underline 1px solid white;
+    text-decoration: underline 1px solid white;
     text-underline-offset: 3px;
 }
 
@@ -641,7 +641,7 @@ body {
 .elem1 h1 {
     font-size: 5vw;
     -webkit-animation-duration: 40s;
-            animation-duration: 40s;
+    animation-duration: 40s;
     /* Longer duration for a smoother effect */
     -webkit-text-stroke: 1px #ffffff;
     font-weight: 600;
@@ -650,11 +650,11 @@ body {
     display: inline-block;
     color: transparent;
     -webkit-animation-timing-function: linear;
-            animation-timing-function: linear;
+    animation-timing-function: linear;
     -webkit-animation-iteration-count: infinite;
-            animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
     -webkit-animation-direction: initial;
-            animation-direction: initial;
+    animation-direction: initial;
     margin-right: -20vw;
     /* Removing margin to ensure continuous text */
 }
@@ -663,12 +663,12 @@ body {
 @-webkit-keyframes anime {
     0% {
         -webkit-transform: translateX(0);
-                transform: translateX(0);
+        transform: translateX(0);
     }
 
     100% {
         -webkit-transform: translateX(-100%);
-                transform: translateX(-100%);
+        transform: translateX(-100%);
     }
 }
 
@@ -676,49 +676,49 @@ body {
 @keyframes anime {
     0% {
         -webkit-transform: translateX(0);
-                transform: translateX(0);
+        transform: translateX(0);
     }
 
     100% {
         -webkit-transform: translateX(-100%);
-                transform: translateX(-100%);
+        transform: translateX(-100%);
     }
 }
 
 .elem h1 {
     -webkit-animation-name: anime;
-            animation-name: anime;
+    animation-name: anime;
     font-family: Helvetica;
 
 }
 
 .elem1 h1 {
     -webkit-animation-name: anime-reverse;
-            animation-name: anime-reverse;
+    animation-name: anime-reverse;
     /* Reversed animation for elem1 */
 }
 
 @-webkit-keyframes anime-reverse {
     0% {
         -webkit-transform: translateX(-100%);
-                transform: translateX(-100%);
+        transform: translateX(-100%);
     }
 
     100% {
         -webkit-transform: translateX(0);
-                transform: translateX(0);
+        transform: translateX(0);
     }
 }
 
 @keyframes anime-reverse {
     0% {
         -webkit-transform: translateX(-100%);
-                transform: translateX(-100%);
+        transform: translateX(-100%);
     }
 
     100% {
         -webkit-transform: translateX(0);
-                transform: translateX(0);
+        transform: translateX(0);
     }
 }
 
@@ -758,13 +758,13 @@ body {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
     padding-right: 15vw;
     padding-top: 4vw;
     -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
     margin-bottom: 3vw;
 }
 
@@ -829,8 +829,8 @@ body {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     position: relative;
     z-index: 9999;
 
@@ -869,7 +869,7 @@ body {
     overflow: hidden;
     white-space: nowrap;
     -webkit-animation: anime4 10s linear infinite;
-            animation: anime4 10s linear infinite;
+    animation: anime4 10s linear infinite;
 }
 
 
@@ -911,10 +911,10 @@ body {
     height: auto;
     /* Maintains aspect ratio while scaling the height */
     -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
     /* Scales image to cover the container while maintaining aspect ratio */
     -o-object-position: center;
-       object-position: center;
+    object-position: center;
     /* Centers the image within the container */
 }
 
@@ -924,9 +924,9 @@ body {
     height: 100%;
     width: 100%;
     -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
     -o-object-position: center;
-       object-position: center;
+    object-position: center;
 
 }
 
@@ -934,12 +934,12 @@ body {
 @-webkit-keyframes anime4 {
     from {
         -webkit-transform: translateX(100%);
-                transform: translateX(100%);
+        transform: translateX(100%);
     }
 
     to {
         -webkit-transform: translateX(-400%);
-                transform: translateX(-400%);
+        transform: translateX(-400%);
     }
 }
 
@@ -947,12 +947,12 @@ body {
 @keyframes anime4 {
     from {
         -webkit-transform: translateX(100%);
-                transform: translateX(100%);
+        transform: translateX(100%);
     }
 
     to {
         -webkit-transform: translateX(-400%);
-                transform: translateX(-400%);
+        transform: translateX(-400%);
     }
 }
 
@@ -965,8 +965,8 @@ body {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
 
 
 
@@ -982,16 +982,16 @@ body {
     display: -ms-flexbox;
     display: flex;
     -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
     -o-object-position: center;
-       object-position: center;
+    object-position: center;
 }
 
 #portfolio-section img:hover {
     color: #111;
     background: #fff;
     -webkit-box-shadow: 0 0 25px #fec100;
-            box-shadow: 0 0 25px #fec100;
+    box-shadow: 0 0 25px #fec100;
 }
 
 #portfolio-section #skillset {
@@ -1001,8 +1001,8 @@ body {
     margin-right: 5vw;
     display: inline-block;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
 
 
 }
@@ -1062,13 +1062,13 @@ body {
     margin-bottom: 5px;
     overflow: visible;
     -webkit-box-shadow: none;
-            box-shadow: none;
+    box-shadow: none;
 }
 
 .progress .progress-bar {
     background: black;
     -webkit-box-shadow: none;
-            box-shadow: none;
+    box-shadow: none;
     border-bottom: 4px dotted #FFA63D;
     border-radius: 0;
     position: relative;
@@ -1127,11 +1127,11 @@ body {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
+    -ms-flex-align: end;
+    align-items: flex-end;
     /* Align content at the bottom */
     height: 20vh;
     /* Full viewport height */
@@ -1147,11 +1147,11 @@ body {
     display: flex;
     width: 30vw;
     -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
     /* Allow wrapping if the content overflows */
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     /* Center the items horizontally */
     margin-top: 5vh;
     margin-left: 7vw;
@@ -1177,7 +1177,7 @@ body {
 
 #portfolio-section #skills h4:hover {
     -webkit-text-decoration: gold;
-            text-decoration: gold;
+    text-decoration: gold;
     text-shadow: 0 0 25px #fec100;
 
 }
@@ -1203,7 +1203,7 @@ body {
     background-size: 20px 2px;
     /* Adjust to the size of your dash */
     -webkit-animation: moveLine 2s linear infinite;
-            animation: moveLine 2s linear infinite;
+    animation: moveLine 2s linear infinite;
 }
 
 @-webkit-keyframes moveLine {
@@ -1238,8 +1238,7 @@ body {
 
     -webkit-box-pack: justify;
 
-        -ms-flex-pack: justify;
+    -ms-flex-pack: justify;
 
-            justify-content: space-between;
+    justify-content: space-between;
 }
-    
