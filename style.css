@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 @font-face {
     font-family: 'MonumentExtended Ultrabold';
     src: url('./fonts/MonumentExtended-Ultrabold - Copy.otf') format('opentype');
@@ -15,14 +22,17 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
-html, body {
+
+html,
+body {
     height: 100%;
     font-family: 'Montserrat', 'Playwrite CU', 'MonumentExtended', 'Courgette', 'Helvetica Neue', Arial, sans-serif;
     scroll-behavior: smooth;
-    background-color: #000;
+    
 }
 
 #main {
@@ -41,7 +51,9 @@ html, body {
     border: 1px solid rgb(255, 255, 255);
     position: fixed;
     z-index: 999;
-    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
 
 }
 
@@ -53,14 +65,23 @@ html, body {
     z-index: 999;
     position: fixed;
     padding: 25vh 20vw;
+    
 
 }
 
 .line {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     gap: 7vw;
 }
 
@@ -76,9 +97,15 @@ html, body {
 
 #line1-part1 {
     gap: 4.5vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 
 }
 
@@ -99,24 +126,64 @@ html, body {
     font-size: 4vw;
     color: rgb(255, 255, 255);
     text-transform: uppercase;
-    animation-name: anime3;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
+    -webkit-animation-name: anime3;
+            animation-name: anime3;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
     font-family: "Courgette", cursive;
 
 }
-.line h1 span{
-    font-family:  'MonumentExtended Regular';
+
+.line h1 span {
+    font-family: 'MonumentExtended Regular';
     font-weight: 400;
     font-size: 6.5vw;
     line-height: 4vw;
     color: #FFA63D;
-} 
+}
 
 #page1 {
     height: 100vh;
     width: 100%;
-    
+
+}
+
+
+@-webkit-keyframes anime3 {
+    0% {
+        -webkit-text-stroke: 1px solid white;
+        color: #fff;
+
+        font-family: 'MonumentExtended Regular';
+
+    }
+
+    25% {
+        -webkit-text-stroke: 1px solid white;
+        color: #FFA63D;
+
+        font-family: "Courgette";
+
+    }
+
+    75% {
+        -webkit-text-stroke: 1px solid white;
+        color: #fff;
+
+        font-family: 'MonumentExtended Regular';
+
+    }
+
+
+    100% {
+        opacity: 1;
+        -webkit-text-stroke: 0px;
+        color: transparent;
+        color: #FFA63D;
+        font-family: "Courgette";
+    }
 }
 
 
@@ -124,22 +191,24 @@ html, body {
     0% {
         -webkit-text-stroke: 1px solid white;
         color: #fff;
-      
-        font-family:  'MonumentExtended Regular';
+
+        font-family: 'MonumentExtended Regular';
 
     }
+
     25% {
         -webkit-text-stroke: 1px solid white;
         color: #FFA63D;
-        
+
         font-family: "Courgette";
 
     }
+
     75% {
         -webkit-text-stroke: 1px solid white;
         color: #fff;
-        
-        font-family:  'MonumentExtended Regular';
+
+        font-family: 'MonumentExtended Regular';
 
     }
 
@@ -154,101 +223,127 @@ html, body {
 }
 
 #page1 #nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0vw 4vw;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 1vw 4vw;
     color: #fff;
 
 }
 
 #page1 #nav #nav-left {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     gap: 2vw;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding: 1.5vw 3vw;
 }
 
-#page1 #nav #nav-left h3{
+#page1 #nav #nav-left h3 {
     font-size: 2rem;
-    font-family:  'MonumentExtended Regular';
+    font-family: 'MonumentExtended Regular';
     font-weight: 400;
-    
+
 }
 
-#page1 #nav #nav-left h3:hover{
-    text-decoration: underline 2px solid #FFA63D;
+#page1 #nav #nav-left h3:hover {
+    -webkit-text-decoration: underline 2px solid #FFA63D;
+            text-decoration: underline 2px solid #FFA63D;
     text-underline-offset: 2vh;
 }
 
 
 
 #nav #nav-part2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     gap: 2.5vw;
     font-size: 0.5vw;
     font-family: "Montserrat", sans-serif;
-    font-weight: 300;
+    font-weight: lighter;
     text-transform: uppercase;
     overflow: hidden;
 }
-#nav #nav-part2 .nav-line{
+
+#nav #nav-part2 .nav-line {
     font-size: 0.5vw;
     font-family: "Montserrat", sans-serif;
     font-weight: 300;
     text-transform: uppercase;
     color: white;
-    text-decoration: none; /* Remove underline from links */
+    text-decoration: none;
+    /* Remove underline from links */
 }
 
-#nav #nav-part2 .nav-line h1:hover{
-    text-decoration: underline 1px dotted #FFA63D;
-    
+#nav #nav-part2 .nav-line h1:hover {
+    -webkit-text-decoration: underline 1px dotted #FFA63D;
+            text-decoration: underline 1px dotted #FFA63D;
+
 }
 
-#hero4 h2{
+#hero4 h2 {
     font-family: "Montserrat", sans-serif;
     line-height: 6vw;
-    font-size: 6.5vw; 
+    font-size: 6.5vw;
     color: white;
     text-transform: uppercase;
     font-weight: 500;
     border-bottom: 5px solid white;
     padding-bottom: 0.2vw;
+    -webkit-transition: all ease-in 0.3s;
+    -o-transition: all ease-in 0.3s;
     transition: all ease-in 0.3s;
 
 }
+
 .hero:nth-child(2) {
     margin-top: 13vh;
 }
-.hero:hover{
+
+.hero:hover {
     -webkit-text-stroke: 2px #fff;
     color: transparent;
-    font-family:  'MonumentExtended Regular';
+    font-family: 'MonumentExtended Regular';
     font-weight: 500;
 }
 
 
 #page1 .hero h1 {
     font-family: "Montserrat", sans-serif;
-    line-height: 6.5vw; 
-    font-size: 6.5vw; 
+    line-height: 6.5vw;
+    font-size: 6.5vw;
     color: white;
     text-transform: uppercase;
     font-weight: 500;
 }
 
 
-#hero4   h2:hover{
+#hero4 h2:hover {
     -webkit-text-stroke: 0.5px #fff;
     color: transparent;
     font-weight: 500;
 }
 
-#page2{
+#page2 {
     min-height: 100vh;
     width: 100%;
     padding-top: 20vh;
@@ -256,56 +351,67 @@ html, body {
 }
 
 
-#video-container img{
+#video-container img {
     position: absolute;
     height: 100%;
     width: 100%;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     top: 0;
 }
-#page2 #video-container{
+
+#page2 #video-container {
     height: 70vh;
     width: 70vw;
     position: relative;
     left: 30%;
-   
-}
-#page2 #video-container video{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
+
 }
 
-#video-cursor{
+#page2 #video-container video {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+}
+
+#video-cursor {
     height: 8vw;
     width: 8vw;
     border-radius: 50%;
     background-color: #FFA63D;
     position: absolute;
     top: -10%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     z-index: 999;
     left: 75%;
 }
 
-#video-cursor i{
+#video-cursor i {
 
     color: #fff;
     font-size: 3vw;
 }
 
 
-#page3{
+#page3 {
     min-height: 150vh;
     width: 100%;
     background-color: #000;
     position: relative;
     padding: 7vh 0;
-    margin-bottom: ;
+
 }
-#page3 h1{
+
+#page3 h1 {
     color: #fff;
     font-size: 4vw;
     text-transform: uppercase;
@@ -315,14 +421,15 @@ html, body {
     margin-left: 28vw;
 
 }
-#page3 .underline{
+
+#page3 .underline {
     height: 1px;
     width: 100%;
     background-color: #fff;
-    
+
 }
 
-#page3 #page3-content h1{
+#page3 #page3-content h1 {
     color: #fff;
     font-size: 7vw;
     text-transform: uppercase;
@@ -331,25 +438,27 @@ html, body {
 
 
 
-#page3 #page3-content h1::before{
+#page3 #page3-content h1::before {
     content: "02";
-    
+
 
 
     position: absolute;
     color: #fec100;
     font-size: 5vw;
-    font-family:  Playwrite CU;
+    font-family: Playwrite CU;
     left: -20%;
- 
+
     top: -20%;
 }
-#image-div-container{
+
+#image-div-container {
     background-color: red;
     padding: 1vw;
     position: relative;
 }
-.image-div{
+
+.image-div {
     height: 30vw;
     width: 24vw;
     background-color: blue;
@@ -357,7 +466,7 @@ html, body {
 
 
 
-#page4{
+#page4 {
     margin-top: 5vh;
     position: relative;
     height: 300vh;
@@ -365,13 +474,13 @@ html, body {
     padding-top: 5vh;
 }
 
-#page4-content{
+#page4-content {
     width: 90vw;
     margin-left: 18vw;
     position: relative;
 }
 
-#page4-content h1{
+#page4-content h1 {
     color: #fff;
     font-size: 7vw;
     text-transform: uppercase;
@@ -380,9 +489,9 @@ html, body {
 }
 
 
-#page4-content h1::before{
+#page4-content h1::before {
     content: "03";
-    
+
 
 
     position: absolute;
@@ -392,7 +501,8 @@ html, body {
     left: -40%;
     top: -10%;
 }
-#page4-content>p{
+
+#page4-content>p {
     color: #e9e9e9;
     font-size: 1.5vw;
     width: 80%;
@@ -402,7 +512,7 @@ html, body {
     line-height: 2vw;
 }
 
-#page4>.underline{
+#page4>.underline {
     height: 2px;
     width: 100%;
     background-color: #fff;
@@ -411,28 +521,30 @@ html, body {
 }
 
 
-.underline{
+.underline {
     height: 2px;
     width: 100%;
     background-color: #fff;
     margin: 3vw 0;
 }
 
-#page4-flex{
+#page4-flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     position: relative;
 }
 
 
 
-#page4-flex img{
+#page4-flex img {
     width: 50%;
     bottom: 30%;
     margin-top: -50px;
 }
 
 
-#page4-flex p{
+#page4-flex p {
     margin-top: 15vh;
     font-size: 0.9vw;
     width: 20%;
@@ -445,7 +557,7 @@ html, body {
 
 }
 
-#page4-blue{
+#page4-blue {
     border-radius: 20px;
     position: absolute;
     background-color: rgb(67, 67, 186);
@@ -455,118 +567,170 @@ html, body {
     padding: 3vw 2vw;
 }
 
-#page4-blue .blue-div-elem{
+#page4-blue .blue-div-elem {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     margin-bottom: 2vh;
 
     height: 10vh;
     border-bottom: 2px solid #fff;
-    justify-content: flex-start;
-    align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin-top: 2vw;
 }
 
-#page4-blue .blue-div-elem h4{
-    font-family : Plain, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+#page4-blue .blue-div-elem h4 {
+    font-family: Plain, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
     padding: 3vw 3vw;
     
     width: 70%;
     font-size: 1.5vw;
     color: #fff;
-    
+
 }
-#page4-blue .blue-div-elem h4:hover{
-    text-decoration:  underline  1px solid white;
+
+#page4-blue .blue-div-elem h4:hover {
+    -webkit-text-decoration: underline 1px solid white;
+            text-decoration: underline 1px solid white;
     text-underline-offset: 3px;
 }
 
 
 
-#page4-blue .blue-div-elem h5{
+#page4-blue .blue-div-elem h5 {
     width: 50%;
-    padding: 3vw 1vw;
-    font-family : Plain, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+    padding: 4vw 0vw;
+    font-family: Plain, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
     color: #fff;
 }
 
 
-#page4 .underline{
+#page4 .underline {
     margin-top: 25vw;
     height: 1px;
     width: 70%;
     margin-left: 30%;
     background-color: #fff;
-    
-    
+
+
 }
 
 
-#page5{
+#page5 {
     min-height: 100vh;
     width: 100%;
     padding: 5vw 0;
-    
+
 }
 
 
-.elem, .elem1 {
+.elem,
+.elem1 {
     white-space: nowrap;
     overflow-x: hidden;
     margin-bottom: -2.5vh;
-  
+
 }
 
-.elem h1, .elem1 h1 {
+.elem h1,
+.elem1 h1 {
     font-size: 5vw;
-    animation-duration: 40s; /* Longer duration for a smoother effect */
+    -webkit-animation-duration: 40s;
+            animation-duration: 40s;
+    /* Longer duration for a smoother effect */
     -webkit-text-stroke: 1px #ffffff;
-    font-weight: 400;
+    font-weight: 600;
+    font-family: 'MonumentExtended Regular';
     text-transform: uppercase;
     display: inline-block;
     color: transparent;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: initial;
-    margin-right: -20vw; /* Removing margin to ensure continuous text */
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-direction: initial;
+            animation-direction: initial;
+    margin-right: -20vw;
+    /* Removing margin to ensure continuous text */
+}
+
+
+@-webkit-keyframes anime {
+    0% {
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+    }
+
+    100% {
+        -webkit-transform: translateX(-100%);
+                transform: translateX(-100%);
+    }
 }
 
 
 @keyframes anime {
     0% {
-        transform: translateX(0);
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
     }
+
     100% {
-        transform: translateX(-100%);
+        -webkit-transform: translateX(-100%);
+                transform: translateX(-100%);
     }
 }
 
 .elem h1 {
-    animation-name: anime;
+    -webkit-animation-name: anime;
+            animation-name: anime;
     font-family: Helvetica;
-    
+
 }
 
 .elem1 h1 {
-    animation-name: anime-reverse; /* Reversed animation for elem1 */
+    -webkit-animation-name: anime-reverse;
+            animation-name: anime-reverse;
+    /* Reversed animation for elem1 */
+}
+
+@-webkit-keyframes anime-reverse {
+    0% {
+        -webkit-transform: translateX(-100%);
+                transform: translateX(-100%);
+    }
+
+    100% {
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
+    }
 }
 
 @keyframes anime-reverse {
     0% {
-        transform: translateX(-100%);
+        -webkit-transform: translateX(-100%);
+                transform: translateX(-100%);
     }
+
     100% {
-        transform: translateX(0);
+        -webkit-transform: translateX(0);
+                transform: translateX(0);
     }
 }
 
-.elem span, .elem1 span {
+.elem span,
+.elem1 span {
     font-style: italic;
     color: transparent;
     font-family: Helvetica;
 }
 
 
-#footer{
+#footer {
     margin-top: -90vh;
     height: 80vh;
     width: 100%;
@@ -576,55 +740,64 @@ html, body {
 }
 
 
-#footer h1{
+#footer h1 {
     font-size: 5vw;
     text-transform: uppercase;
     position: relative;
 
 }
 
-.underline{
+.underline {
     height: 2px;
     width: 100%;
     background-color: #fff;
 }
 
-#footer-div{
+#footer-div {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: flex-start;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
     padding-right: 15vw;
     padding-top: 4vw;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     margin-bottom: 3vw;
 }
 
-#footer h6{
+#footer h6 {
     margin-bottom: 1.5vw;
     font-size: 0.9vw;
 
 }
-.box{
+
+.box {
     width: 20%;
 }
 
-#footer h5{
+#footer h5 {
     font-size: 1.4vw;
     font-weight: 500;
     margin: 0.2vh 0;
-    
+
 }
 
-#footer>h5{
+#footer>h5 {
     font-weight: 500;
     font-size: 1vw;
 }
-#footer h1{
+
+#footer h1 {
 
     font-size: 7vw;
     width: 100%;
     right: 15%;
 }
-#footer h1::before{
+
+#footer h1::before {
     content: "04";
     position: absolute;
     color: #fec100;
@@ -634,7 +807,7 @@ html, body {
     right: 110%;
 }
 
-#page1 > .hero:nth-child(2):before {
+#page1>.hero:nth-child(2):before {
     content: "01";
     position: absolute;
     color: #fec100;
@@ -649,9 +822,15 @@ html, body {
 .hero {
     width: 75%;
     margin-left: 30%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     position: relative;
     z-index: 9999;
 
@@ -666,37 +845,37 @@ html, body {
 
 
 
-#bottom{
+#bottom {
     height: 150px;
     width: 100%;
-    background-color:  transparent;
+    background-color: transparent;
     padding: 5px;
     white-space: nowrap;
     overflow-x: auto;
     overflow-y: hidden;
-    
-   
+
+
 }
-   
-#bottom::-webkit-scrollbar{
+
+#bottom::-webkit-scrollbar {
     display: none;
 }
 
 .elem {
     display: inline-block;
     height: 100%;
-    width: 12vw; /* Adjust to fit the content */
+    width: 12vw;
+    /* Adjust to fit the content */
     overflow: hidden;
     white-space: nowrap;
-    animation: anime4 10s linear infinite;
+    -webkit-animation: anime4 10s linear infinite;
+            animation: anime4 10s linear infinite;
 }
 
 
-#bottom:hover .elem {
- 
-}
+#bottom:hover .elem {}
 
-.elem .text-bottom{
+.elem .text-bottom {
     height: 30%;
     width: 100%;
     bottom: 0;
@@ -705,117 +884,157 @@ html, body {
     text-align: start;
     margin-left: 25px;
     font-family: "Mona Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-   
+
 }
-.elem  .text-bottom   .text-bottom-box span{
+
+.elem .text-bottom .text-bottom-box span {
     border: 1px solid white;
     margin-left: 2px;
     border-radius: 50px;
     margin-top: 10px;
     padding: 5px 5px;
-    font-size: 15px ;
+    font-size: 15px;
     font-family: Arial;
 }
-.elem  .text-bottom   .text-bottom-box{
+
+.elem .text-bottom .text-bottom-box {
     margin-top: 15px;
 }
 
 .elem img {
-    display: block; /* Removes extra space below images caused by inline elements */
-    max-height: 100%; /* Ensures image doesn't exceed its container's height */
-    width: auto; /* Maintains aspect ratio while scaling the width */
-    height: auto; /* Maintains aspect ratio while scaling the height */
-    object-fit: cover; /* Scales image to cover the container while maintaining aspect ratio */
-    object-position: center; /* Centers the image within the container */
+    display: block;
+    /* Removes extra space below images caused by inline elements */
+    max-height: 100%;
+    /* Ensures image doesn't exceed its container's height */
+    width: auto;
+    /* Maintains aspect ratio while scaling the width */
+    height: auto;
+    /* Maintains aspect ratio while scaling the height */
+    -o-object-fit: cover;
+       object-fit: cover;
+    /* Scales image to cover the container while maintaining aspect ratio */
+    -o-object-position: center;
+       object-position: center;
+    /* Centers the image within the container */
 }
 
 
 
-.elem video{
+.elem video {
     height: 100%;
     width: 100%;
-    object-fit: cover;
-    object-position: center;
-  
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
+
+}
+
+
+@-webkit-keyframes anime4 {
+    from {
+        -webkit-transform: translateX(100%);
+                transform: translateX(100%);
+    }
+
+    to {
+        -webkit-transform: translateX(-400%);
+                transform: translateX(-400%);
+    }
 }
 
 
 @keyframes anime4 {
     from {
-        transform: translateX(100%);
+        -webkit-transform: translateX(100%);
+                transform: translateX(100%);
     }
+
     to {
-        transform: translateX(-400%);
+        -webkit-transform: translateX(-400%);
+                transform: translateX(-400%);
     }
 }
 
 
-#page3 #portfolio-section{
+#page3 #portfolio-section {
     height: 125vh;
     width: 100%;
     background-color: #000;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content:space-between;
-    
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 
-    
+
+
 }
 
-#portfolio-section img{
+#portfolio-section img {
 
     margin-left: 10vw;
     border-radius: 40px;
     height: 35vw;
     width: 25vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    object-fit: cover;
-    object-position: center;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
 }
 
-#portfolio-section img:hover{
+#portfolio-section img:hover {
     color: #111;
     background: #fff;
-    box-shadow: 0 0 25px #fec100;
+    -webkit-box-shadow: 0 0 25px #fec100;
+            box-shadow: 0 0 25px #fec100;
 }
 
-#portfolio-section #skillset{
+#portfolio-section #skillset {
     height: 50vw;
 
     width: 50vw;
     margin-right: 5vw;
     display: inline-block;
-    justify-content: center;
-    
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+
 
 }
-#portfolio-section h2{
+
+#portfolio-section h2 {
     margin-top: -5vh;
     font-weight: 400;
     margin-right: 10vw;
-    font-family:  Monument;
+    font-family: 'MonumentExtended Regular';
     font-size: 4vw;
     color: rgb(255, 255, 255);
-  
-    
+
+
 }
 
-#portfolio-section p{
+#portfolio-section p {
     color: rgb(255, 255, 255);
     margin-top: 50px;
-   
+
 }
 
-#skillset h3{
+#skillset h3 {
     font-weight: 650;
     font-family: "Montserrat", sans-serif;
     font-size: 2vw;
     margin-top: 2vw;
     color: rgb(255, 255, 255);
     text-transform: uppercase;
-    
+
 }
 
-#skillset h4{
+#skillset h4 {
     font-weight: 650;
     font-family: "Montserrat", sans-serif;
     font-size: 1rem;
@@ -824,35 +1043,40 @@ html, body {
     text-transform: uppercase;
 }
 
-#portfolio-section .progress-title{
-    font-size: 16px;
+#portfolio-section .progress-title {
+    font-size: 1rem;
     margin-bottom: 5px;
-    font-weight: 700;
-    font-family: inter;
+    font-weight: 400;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: #ffffff;
     text-transform: uppercase;
     margin: 10 10vw;
     margin-top: 5vh;
 }
-.progress{
+
+.progress {
     height: 7px;
     width: 50vw;
     background: black;
     border-radius: 0;
     margin-bottom: 5px;
     overflow: visible;
-    box-shadow: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
 }
-.progress .progress-bar{
+
+.progress .progress-bar {
     background: black;
-    box-shadow: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
     border-bottom: 4px dotted #FFA63D;
     border-radius: 0;
     position: relative;
     -webkit-animation: animate-positive 2s;
     animation: animate-positive 2s;
 }
-.progress .progress-bar:before{
+
+.progress .progress-bar:before {
     content: "";
     border-bottom: 20px solid #FFA63D;
     border-left: 20px solid transparent;
@@ -861,7 +1085,8 @@ html, body {
     bottom: -2px;
     right: -4px;
 }
-.progress-bar .progress-value{
+
+.progress-bar .progress-value {
     font-size: 12px;
     font-weight: 700;
     color: white;
@@ -869,60 +1094,96 @@ html, body {
     top: -33px;
     right: 0;
 }
+
 .progress.yellow .progress-bar,
-.progress.yellow .progress-bar:before{ border-bottom-color: #fec100; }
-.progress.purple .progress-bar,
-.progress.purple .progress-bar:before{ border-bottom-color: #663399; }
-.progress.green .progress-bar,
-.progress.green .progress-bar:before{ border-bottom-color: #0ead69; }
-@-webkit-keyframes animate-positive{
-    0%{ width: 0; }
+.progress.yellow .progress-bar:before {
+    border-bottom-color: #fec100;
 }
-@keyframes animate-positive{
-    0%{ width: 0; }
+
+.progress.purple .progress-bar,
+.progress.purple .progress-bar:before {
+    border-bottom-color: #663399;
+}
+
+.progress.green .progress-bar,
+.progress.green .progress-bar:before {
+    border-bottom-color: #0ead69;
+}
+
+@-webkit-keyframes animate-positive {
+    0% {
+        width: 0;
+    }
+}
+
+@keyframes animate-positive {
+    0% {
+        width: 0;
+    }
 }
 
 #portfolio-section {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: flex-end; /* Align content at the bottom */
-    height: 20vh; /* Full viewport height */
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    /* Align content at the bottom */
+    height: 20vh;
+    /* Full viewport height */
     margin-bottom: 200px;
-    margin: 0; /* Reset margin */
+    margin: 0;
+    /* Reset margin */
 }
 
 #portfolio-section #skills {
     margin-bottom: 250px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     width: 30vw;
-    flex-wrap: wrap; /* Allow wrapping if the content overflows */
-    justify-content: center; /* Center the items horizontally */
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    /* Allow wrapping if the content overflows */
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    /* Center the items horizontally */
     margin-top: 5vh;
-    margin-left: 7vw; /* Reset margin */
-    margin-bottom: 5vh; /* Add some space from the bottom */
+    margin-left: 7vw;
+    /* Reset margin */
+    margin-bottom: 5vh;
+    /* Add some space from the bottom */
 }
 
 #portfolio-section #skills h4 {
-    
+
     font-family: "Playwrite CU", cursive;
     color: #fff;
     font-size: 1.5vw;
     left: -40%;
     font-weight: normal;
     padding: 0vw;
-    margin: 1.5vh 1vw; /* Horizontal margin between items */
+    margin: 1.5vh 1vw;
+    /* Horizontal margin between items */
     text-align: center;
-    white-space: nowrap; /* Prevent text from wrapping */
+    white-space: nowrap;
+    /* Prevent text from wrapping */
 }
 
-#portfolio-section #skills h4:hover{
-    text-decoration: gold;
+#portfolio-section #skills h4:hover {
+    -webkit-text-decoration: gold;
+            text-decoration: gold;
     text-shadow: 0 0 25px #fec100;
- 
+
 }
 
 
-#img-and-tech{
+#img-and-tech {
     margin-bottom: 10vh;
 }
 
@@ -930,62 +1191,55 @@ html, body {
     margin-top: 2.5vw;
     margin-bottom: 2.5vw;
     position: relative;
-    height: 2px; /* Height of the line */
-    width: 100%; /* Width of the container */
-    overflow: hidden; /* Hide any overflowing part */
+    height: 2px;
+    /* Height of the line */
+    width: 100%;
+    /* Width of the container */
+    overflow: hidden;
+    /* Hide any overflowing part */
+    background: -webkit-gradient(linear, left top, right top, color-stop(50%, #fff), color-stop(50%, transparent)) repeat-x;
+    background: -o-linear-gradient(left, #fff 50%, transparent 50%) repeat-x;
     background: linear-gradient(to right, #fff 50%, transparent 50%) repeat-x;
-    background-size: 20px 2px; /* Adjust to the size of your dash */
-    animation: moveLine 2s linear infinite;
+    background-size: 20px 2px;
+    /* Adjust to the size of your dash */
+    -webkit-animation: moveLine 2s linear infinite;
+            animation: moveLine 2s linear infinite;
+}
+
+@-webkit-keyframes moveLine {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 20px 0;
+    }
 }
 
 @keyframes moveLine {
     0% {
         background-position: 0 0;
     }
+
     100% {
-        background-position: 20px 0; 
+        background-position: 20px 0;
     }
 }
 
 
-#margininline{
+#margininline {
     margin-top: 40vh;
 }
 
 
 
-#scrolla{
+#scrolla {
     margin-top: -80vh;
-    
-    justify-content: space-between;
-}
 
-@media only screen and (max-width: 768px) {
-    body {
-        display: none;
-        content: "Only for Desktop";
-        color: #fff;
+    -webkit-box-pack: justify;
 
-    }
+        -ms-flex-pack: justify;
+
+            justify-content: space-between;
 }
-/* style.css */
-@media only screen and (max-width: 768px) {
-    body {
-        display: none;
-    }
     
-    #mobile-message {
-        display: block;
-        position: fixed; /* Ensure it's fixed in the viewport */
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: #000; /* Background color for visibility */
-        color: #fff; /* Text color */
-        text-align: center;
-        line-height: 100vh; /* Center text vertically */
-        font-size: 1.5rem;
-        z-index: 9999; /* Ensure it sits above other content */
-    }
-}

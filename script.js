@@ -4,7 +4,7 @@ var tl = gsap.timeline();
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
-        
+
         document.querySelector(this.getAttribute('href')).scrollIntoView({
             behavior: 'smooth'
         });
@@ -91,7 +91,7 @@ Shery.makeMagnet("#nav-part2 h1", {
 });
 
 // Event listeners for skills and projects
-document.getElementById("download-resume").addEventListener("click", function() {
+document.getElementById("download-resume").addEventListener("click", function () {
     const link = document.createElement("a");
     link.href = "https://drive.google.com/uc?export=download&id=1h9-PZTikEliDn0-eH4ykxWaADJetkirx";
     link.download = "Herin_Soni_Resume.pdf"; // You can specify the name of the downloaded file
