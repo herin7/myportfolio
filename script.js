@@ -60,7 +60,7 @@ function loadingAnimation() {
         y: 200,
         opacity: 0,
         stagger: 0.2,
-        duration: 0.6
+        duration: 0.4
     });
 
     tl.from(".hero h1,.hero h2,.hero h3", {
@@ -81,14 +81,14 @@ function cursorAnimation() {
         });
     });
 
-    Shery.makeMagnet("#nav-part2 h1", {
-        ease: "cubic-bezier(0.23, 1, 0.320, 1)",
-        duration: 1,
-    });
+
 }
 
 
-
+Shery.makeMagnet("#nav-part2 h1", {
+    ease: "cubic-bezier(0.23, 1, 0.320, 1)",
+    duration: 1,
+});
 
 // Event listeners for skills and projects
 document.getElementById("download-resume").addEventListener("click", function() {

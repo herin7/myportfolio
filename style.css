@@ -186,7 +186,7 @@ html, body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 2vw 4vw;
+    padding: 0vw 4vw;
     color: #fff;
 
 }
@@ -565,6 +565,8 @@ html, body {
 
 .elem h1 {
     animation-name: anime;
+    font-family: Helvetica;
+    
 }
 
 .elem1 h1 {
