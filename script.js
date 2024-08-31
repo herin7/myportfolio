@@ -36,8 +36,8 @@ function loadingAnimation() {
 
     tl.to("#loader", {
         opacity: 0,
-        duration: 1.5,
-        delay: 0
+        duration: 2.5,
+        delay: 1
     });
 
     tl.from("#nav", {
@@ -45,10 +45,10 @@ function loadingAnimation() {
     });
 
     tl.from("#page1", {
-        y: 1200,
+        x: 500,
         opacity: 0,
         ease: Power4,
-        duration: 0.5
+        duration: 0.1
     });
   
     tl.to("#loader", {
@@ -61,15 +61,11 @@ function loadingAnimation() {
         stagger: 0.2,
         duration: 0.5
     });
-
-    tl.from(".hero h1,.hero h2,.hero h3", {
-        y: 100,
-        stagger: 0.2,
-        duration: 0.
-    });
+    
 }
 
 loadingAnimation();
+
 
 function cursorAnimation() {
     document.addEventListener('mousemove', function (dets) {
@@ -176,3 +172,7 @@ document.querySelectorAll("#footer .box h5").forEach(function (element) {
     });
 });
 
+document.getElementById('nav-toggle').onclick = function() {
+    var navPart2 = document.getElementById('nav-part2');
+    navPart2.classList.toggle('active');
+}
