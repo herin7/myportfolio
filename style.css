@@ -18,6 +18,12 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: 'Helvetica';
+    src: url('./fonts/Helvetica.ttf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
 
 * {
     margin: 0;
@@ -30,7 +36,7 @@
 html,
 body {
     height: 100%;
-    font-family: 'Montserrat', 'Playwrite CU', 'MonumentExtended', 'Courgette', 'Helvetica Neue', Arial, sans-serif;
+    font-family: 'Montserrat', 'Playwrite CU', 'MonumentExtended', 'Courgette', 'Helvetica', Arial, sans-serif;
     scroll-behavior: smooth;
 
     }
@@ -89,7 +95,7 @@ body {
 }
 
 .line h1 {
-    font-family: Plain, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+    font-family: Plain, "Helvetica", Arial, "Noto Sans", sans-serif;
     font-size: 6vw;
     color: aliceblue;
     text-transform: uppercase;
@@ -704,7 +710,7 @@ body {
 }
 
 #page4-blue .blue-div-elem h4 {
-    font-family: Plain, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+    font-family: Plain, "Helvetica", Arial, "Noto Sans", sans-serif;
     padding: 3vw 3vw;
 
     width: 70%;
@@ -724,7 +730,7 @@ body {
 #page4-blue .blue-div-elem h5 {
     width: 50%;
     padding: 4vw 0vw;
-    font-family: Plain, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+    font-family: Plain, "Helvetica" , Arial, "Noto Sans", sans-serif;
     color: #fff;
 }
 
@@ -992,7 +998,7 @@ body {
     background-color: transparent;
     text-align: start;
     margin-left: 25px;
-    font-family: "Mona Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Mona Sans", "Montserrat" , Helvetica, Arial, sans-serif;
 
 }
 
@@ -1454,7 +1460,7 @@ body {
         margin-top: -8vh;
         color: black;
         text-transform: uppercase;
-        font-family: Montserrat;
+        font-family: "Montserrat";
         font-weight: 800;
 
     }
@@ -1543,12 +1549,13 @@ body {
     font-weight: 100;
     margin: 1.5vh 0vh;
     gap: 0;
+    margin-left: 5.5vw;
 
 }
 .elem1 {
     display: inline-block;
     /* A   djust to fit the content */
-
+    
     white-space: nowrap;
     -webkit-animation: anime4 0s linear infinite;
     animation: anime4 0s linear infinite;
